@@ -15,3 +15,35 @@ body {
   justify-content: center;
   background-color: #f0f0f0;
 }
+
+container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-nav {
+  color: #279960;
+  text-decoration: none;
+  width: auto;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 300ms ease-in;
+  position: relative;
+}
+
+.btn-nav::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #279960;
+  border-radius: 50px;
+  transform: scaleX(0);
+  transition: all 300ms ease-in-out;
+}
+
+.btn-nav:hover::after {
+  transform: scaleX(1);
+}
